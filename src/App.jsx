@@ -1,35 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { memo } from "react"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = memo(() => {
+  return <div>App</div>
+})
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+/**
+ * 在 React 中，每个组件都应该有一个 displayName 属性，这个属性在调试时非常有用，因为它可以帮助 React DevTools 显示更具可读性的组件名。当你使用高阶组件（如 memo）时，你需要手动添加 displayName。
+ * 这样，无论何时你在 React DevTools 中查看这个组件，它都会显示为 'App'。
+ */
+App.displayName = "App"
 
 export default App
