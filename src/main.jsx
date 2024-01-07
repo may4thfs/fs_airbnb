@@ -11,13 +11,13 @@ import "./assets/css/index.css"
 import store from "./store/index.js"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Suspense fallback="Loading...">
-      <Provider store={store}>
-        <HashRouter>
-          <App />
-        </HashRouter>
-      </Provider>
-    </Suspense>
-  </React.StrictMode>
+	<React.StrictMode>
+		<Suspense fallback="Loading...">
+			<Provider store={store}>
+				<HashRouter>
+					<App />
+				</HashRouter>
+			</Provider>
+		</Suspense>
+	</React.StrictMode>
 )
