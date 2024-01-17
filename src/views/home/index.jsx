@@ -6,6 +6,7 @@ const Home = memo(() => {
 	return (
 		<HomeWrapper>
 			<HomeBanner />
+			<div className="content">content</div>
 		</HomeWrapper>
 	)
 })
