@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit"
-import homeReducer from "./module/home"
-import entireReducer from "./module/entire"
+import homeReducer from "./modules/home"
+import entireReducer from "./modules/entire"
 
 const store = configureStore({
-  reducer: {
-    home: homeReducer,
-    entire: entireReducer
-  }
+	reducer: {
+		home: homeReducer,
+		entire: entireReducer
+	}
 })
 
 export default store
