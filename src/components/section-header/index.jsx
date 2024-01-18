@@ -3,12 +3,12 @@ import { memo } from "react"
 import { SectionHeaderWrapper } from "./style"
 
 const SectionHeader = memo((props) => {
-	const { title, subtitle = "默认子标题的数据" } = props
+	const { title, subtitle } = props
 
 	return (
 		<SectionHeaderWrapper>
 			<h2 className="title">{title}</h2>
-			<div className="subtitle">{subtitle}</div>
+			{subtitle && <div className="subtitle">{subtitle}</div>}
 		</SectionHeaderWrapper>
 	)
 })
